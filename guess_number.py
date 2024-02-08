@@ -1,10 +1,12 @@
 number = 10
+cap = 5
 
 print("I'm thinking of a number...")
 
 while True:
     guess = input("What number am I thinking of? ")
-    if guess == 'q':
+    cap -= 1
+    if guess == 'q' or cap == 0:
         print(f'The number was {number}')
         break
     try:
@@ -16,3 +18,4 @@ while True:
             print("Not quite!")
     except ValueError:
         print("ERROR Must enter an integer")
+    print(f"You have {cap} guesses left")

@@ -13,6 +13,9 @@ while True:
             print("Congratulations! You guessed the right number.")
             break
         else:
-            print("Not quite!")
+            if guess > number:
+                print("Too high!")
+            else:
+                print("Too low!")
     except ValueError:
-        print("ERROR Must enter an integer")
+        print("ERROR! Must enter an integer!")
